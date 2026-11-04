@@ -29,6 +29,11 @@ Every push to `main` deploys to GitHub Pages through `.github/workflows/deploy.y
 1. In the repo's Pages settings, set the source to GitHub Actions.
 2. Point the twitarr.com DNS at GitHub Pages when the ship is on land.
 
+App Links
+---------
+
+`public/.well-known/` holds the files iOS and Android read to decide which apps can open twitarr.com links. They are copies of `Sources/swiftarr/Resources/Assets/well-known/` in [Swiftarr](https://github.com/jocosocial/swiftarr), so update them there first and copy the changes here.
+
 License
 -------
 

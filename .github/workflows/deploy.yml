@@ -17,6 +17,8 @@ jobs:
       - run: npm clean-install
       - run: npm run lint
       - run: npm run build
+      # v4 excludes dotfiles, which would silently drop public/.well-known from the site.
+      # Keep this on v3 unless a newer version gains an option to include them.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
