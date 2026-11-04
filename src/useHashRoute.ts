@@ -1,12 +1,13 @@
 import {useSyncExternalStore} from 'react';
 
-export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken';
+export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken' | 'onboard';
 
 const routesByHash: Record<string, Route> = {
   '#/choose': 'choose',
   '#/tricordarr': 'tricordarr',
   '#/web': 'web',
   '#/kraken': 'kraken',
+  '#/onboard': 'onboard',
 };
 
 const subscribe = (onChange: () => void) => {

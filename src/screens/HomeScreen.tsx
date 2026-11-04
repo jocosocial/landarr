@@ -30,8 +30,11 @@ export const HomeScreen = () => {
         ref={headingRef}
         tabIndex={-1}
         variant="h1"
-        sx={{fontSize: {xs: '2.75rem', sm: '4.5rem'}, fontWeight: 700, mb: 5, outline: 'none'}}>
+        sx={{fontSize: {xs: '2.75rem', sm: '4.5rem'}, fontWeight: 700, outline: 'none'}}>
         Welcome to Twitarr
+      </Typography>
+      <Typography sx={{fontSize: {xs: '1.25rem', sm: '1.5rem'}, maxWidth: 640, mt: 3, mb: 5, textWrap: 'balance'}}>
+        The unofficial onboard social media platform of the JoCo Cruise
       </Typography>
       <Button
         href="#/choose"
@@ -47,6 +50,17 @@ export const HomeScreen = () => {
           py: 1.5,
         }}>
         Get Started
+      </Button>
+      <Button
+        href="#/onboard"
+        variant="contained"
+        sx={{
+          bgcolor: 'white',
+          color: twitarrPrimary,
+          '&:hover': {bgcolor: 'rgb(221, 227, 234)'},
+          mt: 3,
+        }}>
+        Seeing this on-board?
       </Button>
     </Box>
   );
