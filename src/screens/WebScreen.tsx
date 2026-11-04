@@ -5,6 +5,7 @@ import {type ReactNode} from 'react';
 import {webSignUpUrl} from '../links';
 import {Page} from './Page';
 import {StepList} from './StepList';
+import {WhatCanIDoLink} from './WhatCanIDoLink';
 
 const steps: ReactNode[] = [
   'Open the Twitarr website using the button above. Any phone, tablet, or computer will work.',
@@ -36,5 +37,6 @@ export const WebScreen = () => (
       Go to the Twitarr Preregistration Site
     </Button>
     <StepList steps={steps} />
+    <WhatCanIDoLink />
   </Page>
 );

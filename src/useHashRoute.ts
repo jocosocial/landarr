@@ -1,6 +1,6 @@
 import {useSyncExternalStore} from 'react';
 
-export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken' | 'onboard';
+export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken' | 'onboard' | 'actions';
 
 const routesByHash: Record<string, Route> = {
   '#/choose': 'choose',
@@ -8,7 +8,20 @@ const routesByHash: Record<string, Route> = {
   '#/web': 'web',
   '#/kraken': 'kraken',
   '#/onboard': 'onboard',
+  '#/actions': 'actions',
 };
+
+let previousHash = '';
+
+window.addEventListener('hashchange', event => {
+  previousHash = new URL(event.oldURL).hash;
+});
+
+/**
+ * The screen the visitor just came from, for screens that can be reached from several places.
+ * Empty after a reload or when they came from the home screen.
+ */
+export const getPreviousHash = () => previousHash;
 
 const subscribe = (onChange: () => void) => {
   window.addEventListener('hashchange', onChange);

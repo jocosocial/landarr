@@ -7,6 +7,7 @@ import {type ReactNode} from 'react';
 import {krakenAppStoreUrl} from '../links';
 import {Page} from './Page';
 import {StepList} from './StepList';
+import {WhatCanIDoLink} from './WhatCanIDoLink';
 
 const steps: ReactNode[] = [
   'Install The Kraken on your iPhone.',
@@ -34,5 +35,6 @@ export const KrakenScreen = () => (
       App Store
     </Button>
     <StepList steps={steps} />
+    <WhatCanIDoLink />
   </Page>
 );

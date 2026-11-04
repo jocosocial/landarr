@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 
+import {ActionsScreen} from './screens/ActionsScreen';
 import {ChooseScreen} from './screens/ChooseScreen';
 import {HomeScreen} from './screens/HomeScreen';
 import {KrakenScreen} from './screens/KrakenScreen';
@@ -15,6 +16,7 @@ const screens = {
   web: WebScreen,
   kraken: KrakenScreen,
   onboard: OnboardScreen,
+  actions: ActionsScreen,
 };
 
 export const App = () => {

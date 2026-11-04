@@ -1,10 +1,17 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import hero from '../assets/hero.jpg';
 import {twitarrPrimary} from '../theme';
 import {useScreenFocus} from '../useScreenFocus';
+
+const secondaryButtonSx = {
+  bgcolor: 'white',
+  color: twitarrPrimary,
+  '&:hover': {bgcolor: 'rgb(221, 227, 234)'},
+};
 
 export const HomeScreen = () => {
   const headingRef = useScreenFocus();
@@ -51,17 +58,14 @@ export const HomeScreen = () => {
         }}>
         Get Started
       </Button>
-      <Button
-        href="#/onboard"
-        variant="contained"
-        sx={{
-          bgcolor: 'white',
-          color: twitarrPrimary,
-          '&:hover': {bgcolor: 'rgb(221, 227, 234)'},
-          mt: 3,
-        }}>
-        Seeing this on-board?
-      </Button>
+      <Stack direction="row" useFlexGap spacing={2} sx={{flexWrap: 'wrap', justifyContent: 'center', mt: 3}}>
+        <Button href="#/actions" variant="contained" sx={secondaryButtonSx}>
+          What can I do?
+        </Button>
+        <Button href="#/onboard" variant="contained" sx={secondaryButtonSx}>
+          Seeing this on-board?
+        </Button>
+      </Stack>
     </Box>
   );
 };

@@ -8,6 +8,7 @@ import {type ReactNode} from 'react';
 import {appStoreUrl, googlePlayUrl} from '../links';
 import {Page} from './Page';
 import {StepList} from './StepList';
+import {WhatCanIDoLink} from './WhatCanIDoLink';
 
 const steps: ReactNode[] = [
   'Used Tricordarr on an earlier cruise? Delete the old app first.',
@@ -54,5 +55,6 @@ export const TricordarrScreen = () => (
       </Button>
     </Stack>
     <StepList steps={steps} />
+    <WhatCanIDoLink />
   </Page>
 );
