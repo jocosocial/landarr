@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 
+import {Header} from './Header';
 import {ActionsScreen} from './screens/ActionsScreen';
 import {ChooseScreen} from './screens/ChooseScreen';
 import {HomeScreen} from './screens/HomeScreen';
@@ -25,6 +26,7 @@ export const App = () => {
 
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100svh'}}>
+      <Header />
       <Box component="main" sx={{display: 'flex', flexDirection: 'column', flexGrow: 1}}>
         <Screen key={route} />
       </Box>

@@ -3,3 +3,5 @@ export const appStoreUrl = 'https://apps.apple.com/us/app/tricordarr/id675477752
 export const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.tricordarr';
 export const helpEmail = 'info@jococruise.com';
 export const krakenAppStoreUrl = 'https://apps.apple.com/us/app/the-kraken-a-twitarr-client/id1496322373';
+export const githubUrl = 'https://github.com/jocosocial';
+export const apiDocsUrl = 'https://docs.twitarr.com';
