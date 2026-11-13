@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import {Header} from './Header';
 import {ActionsScreen} from './screens/ActionsScreen';
 import {ChooseScreen} from './screens/ChooseScreen';
+import {FaqScreen} from './screens/FaqScreen';
 import {HomeScreen} from './screens/HomeScreen';
 import {KrakenScreen} from './screens/KrakenScreen';
 import {OnboardScreen} from './screens/OnboardScreen';
@@ -18,6 +19,7 @@ const screens = {
   kraken: KrakenScreen,
   onboard: OnboardScreen,
   actions: ActionsScreen,
+  faq: FaqScreen,
 };
 
 export const App = () => {

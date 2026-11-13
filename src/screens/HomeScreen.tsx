@@ -59,9 +59,6 @@ export const HomeScreen = () => {
         Get Started
       </Button>
       <Stack direction="row" useFlexGap spacing={2} sx={{flexWrap: 'wrap', justifyContent: 'center', mt: 3}}>
-        <Button href="#/actions" variant="contained" sx={secondaryButtonSx}>
-          What can I do?
-        </Button>
         <Button href="#/onboard" variant="contained" sx={secondaryButtonSx}>
           Seeing this on-board?
         </Button>

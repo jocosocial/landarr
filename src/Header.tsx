@@ -10,6 +10,12 @@ import {twitarrPrimary} from './theme';
 export const Header = () => (
   <AppBar position="static" elevation={0} enableColorOnDark sx={{bgcolor: twitarrPrimary, color: 'white'}}>
     <Toolbar sx={{justifyContent: 'flex-end', gap: 1}}>
+      <Button href="#/actions" sx={{color: 'inherit', px: 1.5}}>
+        Preregistration
+      </Button>
+      <Button href="#/faq" sx={{color: 'inherit', px: 1.5}}>
+        FAQ
+      </Button>
       <Button href={apiDocsUrl} target="_blank" rel="noopener" sx={{color: 'inherit', px: 1.5}}>
         API Docs
       </Button>

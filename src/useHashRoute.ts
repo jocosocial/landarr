@@ -1,6 +1,6 @@
 import {useSyncExternalStore} from 'react';
 
-export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken' | 'onboard' | 'actions';
+export type Route = 'home' | 'choose' | 'tricordarr' | 'web' | 'kraken' | 'onboard' | 'actions' | 'faq';
 
 const routesByHash: Record<string, Route> = {
   '#/choose': 'choose',
@@ -9,6 +9,7 @@ const routesByHash: Record<string, Route> = {
   '#/kraken': 'kraken',
   '#/onboard': 'onboard',
   '#/actions': 'actions',
+  '#/faq': 'faq',
 };
 
 let previousHash = '';
