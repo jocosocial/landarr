@@ -6,9 +6,22 @@
     <meta name="robots" content="noindex" />
     <title>Twitarr</title>
     <script>
-      // Links to Twitarr pages like /forum/123 only work on the ship. Replacing the history entry
-      // keeps the Back button from returning here and redirecting again.
-      window.location.replace('/');
+      // Swiftarr's /clients links open the matching screen. The site routes with the URL hash, so
+      // translate the path here. Links to other Twitarr pages like /forum/123 only work on the
+      // ship, so they go to the home screen. Replacing the history entry keeps the Back button from
+      // returning here and redirecting again.
+      (function () {
+        var path = window.location.pathname.replace(/\/+$/, '');
+        var target = '/';
+        if (path === '/clients/faq') {
+          target = '/#/faq';
+        } else if (path === '/clients') {
+          var platform = new URLSearchParams(window.location.search).get('platform');
+          var screens = {web: '#/web', android: '#/tricordarr'};
+          target = '/' + (screens[platform] || '#/choose');
+        }
+        window.location.replace(target);
+      })();
     </script>
     <noscript>
       <meta http-equiv="refresh" content="0; url=/" />
